@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+
+  --color-app-cyan: #2bd0d0;
+  --color-app-cyan-hover: #9ae3e3;
+  --color-app-dark-violet: #4b3f6b;
+  --color-app-red: #f46363;
+  --color-app-gray: #eff1f7;
+  --color-app-grayish-violet: #9e9aa8;
+  --color-app-very-dark-blue: #34313d;
+  --color-app-very-dark-violet: #3a3054;
+
+  --breakpoint-2xl: 90rem;
+
+  --rect-height: calc(100% - 192px);
+  --rect-center: calc(0.5 * 100dvw - 28px);
+  --rect-center-desk: calc(0.5 * 100% + 44px);
+  --mobile-menu-width: calc(100dvw - 48px);
+
+  --animate-slow-drop: drop 0.6s ease;
+  --animate-show-menu-items: show-menu 0.6s ease forwards;
+  --animate-show-login-items: show-login 0.6s ease forwards;
+  --animate-slow-up: up 0.6s ease forwards;
+  --animate-hide-menu-items: hide-menu 0.6s ease forwards;
+  --animate-hide-login-items: hide-login 0.6s ease forwards;
+
+  @keyframes drop {
+    from {
+      height: 0px;
+    }
+    to {
+      height: 391px;
+    }
+  }
+  @keyframes up {
+    from {
+      height: 391px;
+    }
+    to {
+      height: 0px;
+      display: none;
+    }
+  }
+  @keyframes show-menu {
+    0%,
+    35% {
+      visibility: hidden;
+    }
+    50%,
+    75%,
+    100% {
+      visibility: visible;
+    }
+  }
+  @keyframes show-login {
+    0%,
+    50%,
+    75% {
+      visibility: hidden;
+    }
+    80%,
+    100% {
+      visibility: visible;
+    }
+  }
+
+  @keyframes hide-menu {
+    0%,
+    35% {
+      visibility: visible;
+    }
+    45%,
+    100% {
+      visibility: hidden;
+    }
+  }
+  @keyframes hide-login {
+    0% {
+      visibility: visible;
+    }
+    10%,
+    100% {
+      visibility: hidden;
+    }
+  }
+}
